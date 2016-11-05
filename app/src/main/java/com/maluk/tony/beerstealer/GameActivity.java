@@ -51,42 +51,16 @@ public class GameActivity extends StartActivity {
         ivArrowRU = (ImageView)findViewById(R.id.arrow_right_up);
         ivArrowRD = (ImageView)findViewById(R.id.arrow_right_down);
 
-        final Animation animationLU = AnimationUtils.loadAnimation(this, R.anim.transfer_left_up);
-        final Animation animationLD = AnimationUtils.loadAnimation(this, R.anim.transfer_left_down);
-        final Animation animationRU = AnimationUtils.loadAnimation(this, R.anim.transfer_right_up);
-        final Animation animationRD = AnimationUtils.loadAnimation(this, R.anim.transfer_right_down);
         final Animation animationArrow = AnimationUtils.loadAnimation(this, R.anim.animation_arrow);
 
-        ivArrowLU.startAnimation(animationArrow);
-        ivArrowLD.startAnimation(animationArrow);
-        ivArrowRU.startAnimation(animationArrow);
-        ivArrowRD.startAnimation(animationArrow);
-
-        animationArrow.setAnimationListener(new Animation.AnimationListener() {
-            @Override
-            public void onAnimationStart(Animation animation) {
-
-            }
-
-            @Override
-            public void onAnimationEnd(Animation animation) {
-                ivArrowLU.setVisibility(View.INVISIBLE);
-                ivArrowLD.setVisibility(View.INVISIBLE);
-                ivArrowRU.setVisibility(View.INVISIBLE);
-                ivArrowRD.setVisibility(View.INVISIBLE);
-            }
-
-            @Override
-            public void onAnimationRepeat(Animation animation) {
-
-            }
-        });
-        ibtnCupLU.startAnimation(animationLU);
-        ibtnCupLD.startAnimation(animationLD);
-        ibtnCupRU.startAnimation(animationRU);
-        ibtnCupRD.startAnimation(animationRD);
+        //init view's
+        ImageView[] arrArrow = {ivArrowLU, ivArrowLD, ivArrowRU, ivArrowRD};
+        for(int i=0; i<arrArrow.length; i++){
+            arrArrow[i].startAnimation(animationArrow);
+        }
     }
 
+    //action after tap on cup
     public void onTouchCup(int a){
         countWin++;
         tvWin.setText(getString(R.string.Stolen) + ":" + countWin);
