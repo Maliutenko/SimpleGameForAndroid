@@ -87,6 +87,16 @@ public class GameActivity extends StartActivity {
         ibtnCupRD.startAnimation(animationRD);
     }
 
+    public void onTouchCup(int a){
+        countWin++;
+        tvWin.setText(getString(R.string.Stolen) + ":" + countWin);
+        if(a == DAMAGE_POSITIVE){
+            Intent intent = new Intent(this,EndActivity.class);
+            intent.putExtra("resultscore",tvWin.getText().toString());
+            startActivity(intent);finish();
+        }
+    }
+
     public void onMyButtonClick(View view) {
 
         final Animation animationLU = AnimationUtils.loadAnimation(this, R.anim.transfer_left_up);
@@ -331,50 +341,27 @@ public class GameActivity extends StartActivity {
 
         switch (view.getId()) {
             case R.id.cup_left_up:
-                countWin++;
-                tvWin.setText(getString(R.string.Stolen) + ":" + countWin);
-                ibtnCupLU.startAnimation(animationLU);
+                onTouchCup(damageLU);
                 flagLU++;
-                if(damageLU == DAMAGE_POSITIVE){
-                    Intent intent = new Intent(this,EndActivity.class);
-                    intent.putExtra("resultscore",tvWin.getText().toString());
-                    startActivity(intent);finish();
-                }
+                ibtnCupLU.startAnimation(animationLU);
                 break;
             case R.id.cup_left_down:
-                countWin++;
-                tvWin.setText(getString(R.string.Stolen) + ":" + countWin);
-                ibtnCupLD.startAnimation(animationLD);
+                onTouchCup(damageLD);
                 flagLD++;
-                if(damageLD == DAMAGE_POSITIVE){
-                    Intent intent = new Intent(this,EndActivity.class);
-                    intent.putExtra("resultscore",tvWin.getText().toString());
-                    startActivity(intent);finish();
-                }
+                ibtnCupLD.startAnimation(animationLD);
                 break;
             case R.id.cup_right_up:
-                countWin++;
-                tvWin.setText(getString(R.string.Stolen) + ":" + countWin);
-                ibtnCupRU.startAnimation(animationRU);
+                onTouchCup(damageRU);
                 flagRU++;
-                if(damageRU == DAMAGE_POSITIVE){
-                    Intent intent = new Intent(this,EndActivity.class);
-                    intent.putExtra("resultscore",tvWin.getText().toString());
-                    startActivity(intent);finish();
-                }
+                ibtnCupRU.startAnimation(animationRU);
                 break;
             case R.id.cup_right_down:
-                countWin++;
-                tvWin.setText(getString(R.string.Stolen) + ":" + countWin);
-                ibtnCupRD.startAnimation(animationRD);
+                onTouchCup(damageRD);
                 flagRD++;
-                if(damageRD == DAMAGE_POSITIVE){
-                    Intent intent = new Intent(this,EndActivity.class);
-                    intent.putExtra("resultscore",tvWin.getText().toString());
-                    startActivity(intent);finish();
-                }
+                ibtnCupRD.startAnimation(animationRD);
                 break;
         }
+
         if(countLose>=5){
             Intent intent = new Intent(this,EndActivity.class);
             intent.putExtra("resultscore",tvWin.getText().toString());
