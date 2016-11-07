@@ -7,13 +7,18 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
 /**
  * Created by Tony on 19.08.2016.
  */
 public class StartActivity extends AppCompatActivity {
-    Button btnGame;
-    Button btnRules;
-    Button btnExit;
+    @BindView(R.id.button_game) Button btnGame;
+    @BindView(R.id.button_rules) Button btnRules;
+    @BindView(R.id.button_exit) Button btnExit;
+
     View decorView;
     final int DAMAGE_POSITIVE = 1;
     final int DAMAGE_NEGATIVE = 0;
@@ -25,12 +30,9 @@ public class StartActivity extends AppCompatActivity {
         setContentView(R.layout.activity_start);
 
         decorView = getWindow().getDecorView();
-
-        btnGame =(Button)findViewById(R.id.button_game);
-        btnRules =(Button)findViewById(R.id.button_rules);
-        btnExit =(Button)findViewById(R.id.button_exit);
     }
 
+    @OnClick({R.id.button_game, R.id.button_rules, R.id.button_exit})
     public void omMyStartButtonClick(View view){
         switch(view.getId()){
             case R.id.button_game:
