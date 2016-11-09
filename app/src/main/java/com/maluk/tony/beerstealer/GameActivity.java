@@ -258,61 +258,6 @@ public class GameActivity extends StartActivity {
             }
         });
 
-        if(countWin>=10){
-            animationLU.setDuration(1000);
-            animationLU.setStartOffset(0);
-            animLL.setDuration(500);
-            animLL.setStartOffset(100);
-            animationLD.setDuration(800);
-            animationLD.setStartOffset(0);
-            animLLD.setDuration(500);
-            animLLD.setStartOffset(100);
-            animationRU.setDuration(1200);
-            animationRU.setStartOffset(0);
-            animLR.setDuration(500);
-            animLR.setStartOffset(100);
-            animationRD.setDuration(900);
-            animationRD.setStartOffset(0);
-            animLRD.setDuration(500);
-            animLRD.setStartOffset(100);
-        }
-        if(countWin>=20){
-            animationLU.setDuration(500);
-            animationLU.setStartOffset(0);
-            animLL.setDuration(100);
-            animLL.setStartOffset(0);
-            animationLD.setDuration(800);
-            animationLD.setStartOffset(0);
-            animLLD.setDuration(100);
-            animLLD.setStartOffset(0);
-            animationRU.setDuration(500);
-            animationRU.setStartOffset(0);
-            animLR.setDuration(100);
-            animLR.setStartOffset(0);
-            animationRD.setDuration(300);
-            animationRD.setStartOffset(0);
-            animLRD.setDuration(100);
-            animLRD.setStartOffset(0);
-        }
-        if(countWin>=30){
-            animationLU.setDuration(250);
-            animationLU.setStartOffset(0);
-            animLL.setDuration(50);
-            animLL.setStartOffset(0);
-            animationLD.setDuration(400);
-            animationLD.setStartOffset(0);
-            animLLD.setDuration(50);
-            animLLD.setStartOffset(0);
-            animationRU.setDuration(250);
-            animationRU.setStartOffset(0);
-            animLR.setDuration(50);
-            animLR.setStartOffset(0);
-            animationRD.setDuration(150);
-            animationRD.setStartOffset(0);
-            animLRD.setDuration(50);
-            animLRD.setStartOffset(0);
-        }
-
         switch (view.getId()) {
             case R.id.cup_left_up:
                 onTouchCup(damageLU);
@@ -335,6 +280,9 @@ public class GameActivity extends StartActivity {
                 ibtnCupRD.startAnimation(animationRD);
                 break;
         }
+
+        GameSpeed speed = new GameSpeed();
+        speed.gameSpeed(countWin, animationLU, animLL, animationLD, animLLD, animationRU, animLR, animationRD, animLRD);
 
         if(countLose>=5){
             Intent intent = new Intent(this,EndActivity.class);
