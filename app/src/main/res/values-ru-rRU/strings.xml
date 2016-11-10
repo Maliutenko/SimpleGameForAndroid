@@ -4,12 +4,12 @@
     <string name="Exit">Выход</string>
     <string name="Game">Играть</string>
     <string name="Rules">Правила</string>
-    <string name="Stolen">Похищено кружек</string>
-    <string name="Lost">Потеряно кружек</string>
+    <string name="Stolen">Выпил</string>
+    <string name="Lost">Потерял</string>
     <string name="Quit">Выход</string>
     <string name="Try_again">Еще раз!</string>
     <string name="Screenshot">Не забудь сделать скриншот своего результата!</string>
     <string name="Hashtag">Хэштэг в соц. сетях #BeerStealer</string>
     <string name="Back">Назад</string>
-    <string name="Double_click_to_exit">Press once again to exit!</string>
+    <string name="Double_click_to_exit">Еще раз, чтобы выйти!</string>
 </resources>
