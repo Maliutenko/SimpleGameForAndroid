@@ -55,7 +55,7 @@ public class GameActivity extends StartActivity {
 
         //init view's
         ImageView[] arrArrow = {ivArrowLU, ivArrowLD, ivArrowRU, ivArrowRD};
-        for(int i=0; i<arrArrow.length; i++){
+        for(int i = 0; i < arrArrow.length; i++){
             arrArrow[i].startAnimation(animationArrow);
         }
     }
