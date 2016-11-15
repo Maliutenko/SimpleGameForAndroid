@@ -6,13 +6,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text=""
-        android:id="@+id/result_View"
+        android:text="Stolen:12"
+        android:id="@+id/result_view"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="60dp"
-        android:textSize="55sp"
-        android:textStyle="italic"
+        android:layout_marginTop="50dp"
+        android:textSize="95sp"
         android:textColor="@color/white"/>
 
     <Button

@@ -1,6 +1,7 @@
 package com.maluk.tony.beerstealer;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
@@ -50,6 +51,10 @@ public class GameActivity extends StartActivity {
         ivArrowLD = (ImageView)findViewById(R.id.arrow_left_down);
         ivArrowRU = (ImageView)findViewById(R.id.arrow_right_up);
         ivArrowRD = (ImageView)findViewById(R.id.arrow_right_down);
+
+        Typeface typeface = Typeface.createFromAsset(getAssets(), "matreshka.ttf");
+        tvWin.setTypeface(typeface);
+        tvLose.setTypeface(typeface);
 
         final Animation animationArrow = AnimationUtils.loadAnimation(this, R.anim.animation_arrow);
 

@@ -1,6 +1,7 @@
 package com.maluk.tony.beerstealer;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -21,12 +22,15 @@ public class EndActivity extends StartActivity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_end);
 
-        tvResult = (TextView) findViewById(R.id.result_View);
+        tvResult = (TextView) findViewById(R.id.result_view);
         tvScreenshot = (TextView) findViewById(R.id.text_screenshot);
         btnTryAgain = (Button) findViewById(R.id.button_try_again);
         btnQuit = (Button) findViewById(R.id.button_quit);
         btnQuit.setOnClickListener(this);
         btnTryAgain.setOnClickListener(this);
+
+        Typeface typeface = Typeface.createFromAsset(getAssets(), "matreshka.ttf");
+        tvResult.setTypeface(typeface);
 
         Intent intent = getIntent();
         String resultcore = intent.getStringExtra("resultscore");
