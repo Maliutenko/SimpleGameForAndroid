@@ -10,7 +10,62 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
-
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/text_rules_one"
+                android:gravity="center_horizontal"
+                android:text="@string/Tap_on_cup"
+                android:textSize="35sp"
+                android:textColor="@color/beer2" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/image_view_light"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/ic_cup_light" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/text_rules_two"
+                android:gravity="center_horizontal"
+                android:text="@string/Arrow"
+                android:textSize="35sp"
+                android:textColor="@color/beer2" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/image_view_arrow"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/arrow" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/image_view_light_two"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/ic_cup_light" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/text_rules_three"
+                android:gravity="center_horizontal"
+                android:text="@string/Black_beer"
+                android:textSize="35sp"
+                android:textColor="@color/beer2" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/image_view_dark"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/ic_cup_dark" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/text_rules_four"
+                android:gravity="center_horizontal"
+                android:text="@string/Can_lost"
+                android:textSize="45sp"
+                android:textColor="@color/red" />
             <Button
                 android:layout_width="250dp"
                 android:layout_height="wrap_content"
