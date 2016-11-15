@@ -12,4 +12,8 @@
     <string name="Hashtag">Хештег в мережах #BeerStealer</string>
     <string name="Back">Повернутись</string>
     <string name="Double_click_to_exit">Ще раз для виходу!</string>
+    <string name="Tap_on_cup">Тисніть лише на світле пиво:</string>
+    <string name="Arrow">Червона стрілка вказує на позицію, де треба ловити пиво:</string>
+    <string name="Black_beer">Не чіпайте темне пиво:</string>
+    <string name="Can_lost">Можна втратити лише 5 кухлів.</string>
 </resources>

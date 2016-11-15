@@ -12,4 +12,8 @@
     <string name="Hashtag">Хэштэг в соц. сетях #BeerStealer</string>
     <string name="Back">Назад</string>
     <string name="Double_click_to_exit">Еще раз, чтобы выйти!</string>
+    <string name="Tap_on_cup">Ловите только светлое пиво:</string>
+    <string name="Arrow">Красная стрелка укажет позицию, в которой ловить пиво:</string>
+    <string name="Black_beer">Не ловите темное пиво:</string>
+    <string name="Can_lost">Можно потерять только пять бокалов.</string>
 </resources>

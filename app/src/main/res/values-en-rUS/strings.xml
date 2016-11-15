@@ -12,4 +12,8 @@
     <string name="Hashtag">Social network hashtag is #BeerStealer</string>
     <string name="Back">Back</string>
     <string name="Double_click_to_exit">Press once again to exit!</string>
+    <string name="Tap_on_cup">Tap on cup with light beer:</string>
+    <string name="Arrow">Red arrow will show you position where you must take beer:</string>
+    <string name="Black_beer">Do not touch dark beer:</string>
+    <string name="Can_lost">You can lose only 5 cups.</string>
 </resources>
