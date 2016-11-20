@@ -82,7 +82,7 @@ public class GameActivity extends StartActivity {
         final Animation animationRU = AnimationUtils.loadAnimation(this, R.anim.transfer_right_up);
         final Animation animationRD = AnimationUtils.loadAnimation(this, R.anim.transfer_right_down);
         final Animation animLL = AnimationUtils.loadAnimation(this, R.anim.anim_lose_left);
-        final Animation animLR = AnimationUtils.loadAnimation(this, R.anim.anim_lose_right);
+        final Animation animLRU = AnimationUtils.loadAnimation(this, R.anim.anim_lose_right);
         final Animation animLLD = AnimationUtils.loadAnimation(this, R.anim.anim_lose_left_down);
         final Animation animLRD = AnimationUtils.loadAnimation(this, R.anim.anim_lose_right_down);
 
@@ -118,11 +118,12 @@ public class GameActivity extends StartActivity {
             @Override
             public void onAnimationEnd(Animation animation) {
                 if(flagLU % 3 == 0){
-                    ibtnCupLU.setImageResource(R.drawable.ic_cup_light);
                     flagLU++;
                 }
-                else countLose++;tvLose.setText(getString(R.string.Lost)+":"+countLose);
-                ibtnCupLU.startAnimation(animationLU);
+                else
+                    countLose++;
+                    tvLose.setText(getString(R.string.Lost)+":"+countLose);
+                    ibtnCupLU.startAnimation(animationLU);
             }
 
             @Override
@@ -163,11 +164,12 @@ public class GameActivity extends StartActivity {
             @Override
             public void onAnimationEnd(Animation animation) {
                 if(flagLD % 2 == 0){
-                    ibtnCupLD.setImageResource(R.drawable.ic_cup_light);
                     flagLD++;
                 }
-                else countLose++;tvLose.setText(getString(R.string.Lost)+":"+countLose);
-                ibtnCupLD.startAnimation(animationLD);
+                else
+                    countLose++;
+                    tvLose.setText(getString(R.string.Lost)+":"+countLose);
+                    ibtnCupLD.startAnimation(animationLD);
             }
 
             @Override
@@ -191,14 +193,14 @@ public class GameActivity extends StartActivity {
 
             @Override
             public void onAnimationEnd(Animation animation) {
-                ibtnCupRU.startAnimation(animLR);
+                ibtnCupRU.startAnimation(animLRU);
             }
 
             @Override
             public void onAnimationRepeat(Animation animation) {
             }
         });
-        animLR.setAnimationListener(new Animation.AnimationListener() {
+        animLRU.setAnimationListener(new Animation.AnimationListener() {
             @Override
             public void onAnimationStart(Animation animation) {
                 ibtnCupRU.setEnabled(true);
@@ -207,11 +209,12 @@ public class GameActivity extends StartActivity {
             @Override
             public void onAnimationEnd(Animation animation) {
                 if(flagRU %4==0){
-                    ibtnCupRU.setImageResource(R.drawable.ic_cup_light);
                     flagRU++;
                 }
-                else countLose++; tvLose.setText(getString(R.string.Lost)+":"+countLose);
-                ibtnCupRU.startAnimation(animationRU);
+                else
+                    countLose++;
+                    tvLose.setText(getString(R.string.Lost)+":"+countLose);
+                    ibtnCupRU.startAnimation(animationRU);
             }
 
             @Override
@@ -250,11 +253,12 @@ public class GameActivity extends StartActivity {
             @Override
             public void onAnimationEnd(Animation animation) {
                 if(flagRD %3==0){
-                    ibtnCupRD.setImageResource(R.drawable.ic_cup_light);
                     flagRD++;
                 }
-                else countLose++; tvLose.setText(getString(R.string.Lost)+":"+countLose);
-                ibtnCupRD.startAnimation(animationRD);
+                else
+                    countLose++;
+                    tvLose.setText(getString(R.string.Lost)+":"+countLose);
+                    ibtnCupRD.startAnimation(animationRD);
             }
 
             @Override
@@ -286,11 +290,11 @@ public class GameActivity extends StartActivity {
         }
 
         GameSpeed speed = new GameSpeed();
-        speed.gameSpeed(countWin, animationLU, animLL, animationLD, animLLD, animationRU, animLR, animationRD, animLRD);
+        speed.gameSpeed(countWin, animationLU, animLL, animationLD, animLLD, animationRU, animLRU, animationRD, animLRD);
 
         if(countLose>=5){
             Intent intent = new Intent(this,EndActivity.class);
-            intent.putExtra("resultscore",tvWin.getText().toString());
+            intent.putExtra("resultscore", tvWin.getText().toString());
             startActivity(intent);finish();
         }
     }
