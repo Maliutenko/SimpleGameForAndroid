@@ -10,8 +10,8 @@
         android:id="@+id/result_view"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
-        android:textSize="95sp"
+        android:layout_marginTop="90dp"
+        android:textSize="65sp"
         android:textColor="@color/white"/>
 
     <Button
@@ -24,7 +24,7 @@
         android:layout_alignParentStart="true"
         android:layout_marginLeft="75dp"
         android:layout_marginStart="75dp"
-        android:layout_marginBottom="150dp"
+        android:layout_marginBottom="55dp"
         android:background="@drawable/selector"
         android:textColor="@color/abc_input_method_navigation_guard" />
 
@@ -38,7 +38,7 @@
         android:layout_alignParentEnd="true"
         android:layout_marginRight="75dp"
         android:layout_marginEnd="75dp"
-        android:layout_marginBottom="150dp"
+        android:layout_marginBottom="55dp"
         android:background="@drawable/selector"
         android:textColor="@color/abc_input_method_navigation_guard" />
 

@@ -52,7 +52,7 @@ public class GameActivity extends StartActivity {
         ivArrowRU = (ImageView)findViewById(R.id.arrow_right_up);
         ivArrowRD = (ImageView)findViewById(R.id.arrow_right_down);
 
-        Typeface typeface = Typeface.createFromAsset(getAssets(), "matreshka.ttf");
+        Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/comicrazy.ttf");
         tvWin.setTypeface(typeface);
         tvLose.setTypeface(typeface);
 

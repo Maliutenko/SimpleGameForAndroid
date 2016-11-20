@@ -29,7 +29,7 @@ public class EndActivity extends StartActivity implements View.OnClickListener {
         btnQuit.setOnClickListener(this);
         btnTryAgain.setOnClickListener(this);
 
-        Typeface typeface = Typeface.createFromAsset(getAssets(), "matreshka.ttf");
+        Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/comicrazy.ttf");
         tvResult.setTypeface(typeface);
 
         Intent intent = getIntent();

@@ -37,7 +37,7 @@ public class RulesActivity extends StartActivity implements View.OnClickListener
         ivDark = (ImageView)findViewById(R.id.image_view_dark);
         ivRedArrow = (ImageView)findViewById(R.id.image_view_arrow);
 
-        Typeface typeface = Typeface.createFromAsset(getAssets(), "matreshka.ttf");
+        Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/comicrazy.ttf");
         tvOne.setTypeface(typeface);
         tvTwo.setTypeface(typeface);
         tvThree.setTypeface(typeface);
