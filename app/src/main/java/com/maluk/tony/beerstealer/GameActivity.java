@@ -65,7 +65,7 @@ public class GameActivity extends StartActivity {
     }
 
     //action after tap on cup
-    public void onTouchCup(int a){
+    private void onTouchCup(int a){
         countWin++;
         tvWin.setText(getString(R.string.Stolen) + ":" + countWin);
         if(a == DAMAGE_POSITIVE){

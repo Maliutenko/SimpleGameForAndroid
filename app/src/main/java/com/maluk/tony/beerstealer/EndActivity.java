@@ -5,7 +5,9 @@ import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
+import com.startad.lib.SADView;
 
 /**
  * Created by Tony on 09.09.2016.
@@ -16,11 +18,25 @@ public class EndActivity extends StartActivity implements View.OnClickListener {
     TextView tvScreenshot;
     Button btnTryAgain;
     Button btnQuit;
+    protected SADView sadView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_end);
+
+        //startAD banner
+
+        this.sadView = new SADView(this, "57c37cb84222dc5c008b4567");
+        LinearLayout layout = (LinearLayout)findViewById(R.id.banner_startad);
+        layout.addView(this.sadView);
+        String locale = java.util.Locale.getDefault().getLanguage();
+        if(locale.equals("en")){
+            this.sadView.loadAd(SADView.LANGUAGE_EN);
+        }
+        if(locale.equals("ru")){
+            this.sadView.loadAd(SADView.LANGUAGE_RU);
+        }
 
         tvResult = (TextView) findViewById(R.id.result_view);
         tvScreenshot = (TextView) findViewById(R.id.text_screenshot);
@@ -48,5 +64,13 @@ public class EndActivity extends StartActivity implements View.OnClickListener {
                 finish();
                 break;
         }
+    }
+
+    @Override
+    public void onDestroy() {
+        if (this.sadView != null) {
+            this.sadView.destroy();
+        }
+        super.onDestroy();
     }
 }
