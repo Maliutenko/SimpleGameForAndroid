@@ -1,2 +1,2 @@
 #SimpleGameForAndroid
-Simple game for Android. Application use only simple technologies.
+The simple game for Android OS. The application uses basic technologies only.
